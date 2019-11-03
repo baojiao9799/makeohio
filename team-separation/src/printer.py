@@ -30,6 +30,11 @@ def print_challenge_pdfs(challenges):
         f.close()
         pdfkit.from_file(get_challenge_html_filename(cname), get_challenge_pdf_filename(cname))
         challenge_pdfs.append(get_challenge_pdf_filename(cname))
+        challenge_pdfs.append(get_challenge_pdf_filename(cname))
+        challenge_pdfs.append(get_challenge_pdf_filename(cname))
+        challenge_pdfs.append(get_challenge_pdf_filename(cname))
+        challenge_pdfs.append(get_challenge_pdf_filename(cname))
+        challenge_pdfs.append(get_challenge_pdf_filename(cname))
     return challenge_pdfs
 
 def print_general_pdfs(judge_pairs):
@@ -56,6 +61,7 @@ def print_general_pdfs(judge_pairs):
 
         pdfkit.from_file(get_general_html_filename(str(pair)), get_general_pdf_filename(str(pair)))
         print(str(pair)+'/'+str(len(judge_pairs))+' Complete')
+        general_pdfs.append(get_general_pdf_filename(str(pair)))
         general_pdfs.append(get_general_pdf_filename(str(pair)))
     return general_pdfs
 

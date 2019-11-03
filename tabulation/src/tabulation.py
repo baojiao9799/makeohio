@@ -15,8 +15,8 @@ with open(DATA_DIRECTORY + filename) as data:
     reader = csv.reader(data)
     row_num = 0
     for row in reader:
-        # teams start on row 3
-        if row_num > 2:
+        # if complete is true
+        if row[6] == 'True':
             team_name = row[19]+row[20]+row[21]
             scores = row[24:29]
             if team_name in teams.keys():
