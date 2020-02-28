@@ -1,6 +1,6 @@
 # tabulates results
 # python 3 required - python3 tabulation.py
-# Technical Difficulty,Intuitiveness,Impact/Usefulness,Creativity,Wow Factor
+# Technical Difficulty,Polish,Impact,Creativity,Wow Factor
 import csv, os
 from team import Team
 
@@ -46,6 +46,6 @@ with open('../output/results.csv', mode='w') as results:
     results_writer = csv.writer(results, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
     results_writer.writerow(['Team Name', 'Technical Difficulty', 'Intuitiveness', 'Impact/Usefulness', 'Creativity', 'Wow Factor', 'Total Average', 'Total Score'])
     for team in final:
-        results_writer.writerow([team.team_name, team.tech, team.intu, team.imp, team.cre, team.wow, team.average, team.sum])
+        results_writer.writerow([team.team_name, team.tech, team.pol, team.imp, team.cre, team.wow, team.average, team.sum])
 
 
