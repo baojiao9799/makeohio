@@ -7,10 +7,6 @@ def print_challenge_pdfs(challenges):
     for challenge in challenges:
         teams = challenges[challenge]
         cname = challenge
-        cname = cname.replace(' ', '')
-        if '/' in challenge or '&' in challenge:
-            cname = cname.replace('/', '')
-            cname = cname.replace('&', '')
         f = open(get_challenge_html_filename(cname), "w")
 
         f.write('<!DOCTYPE html><html><head><link rel="stylesheet" type="text/css" href="../src/style.css"></head><body>')
