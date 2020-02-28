@@ -11,14 +11,15 @@ teams = {}
 
 # open file and save teams
 # collates all score into dict with scores
-with open(DATA_DIRECTORY + filename) as data:
+with open(DATA_DIRECTORY + filename, errors = 'ignore') as data:
     reader = csv.reader(data)
     row_num = 0
     for row in reader:
         # if complete is true
         if row[6] == 'True':
-            team_name = row[19]+row[20]+row[21]
+            team_name = row[19]+row[20]+row[21]    # check indices with new survey
             scores = row[24:29]
+            in_house = row[30]
             if team_name in teams.keys():
                 teams[team_name].append(scores)
             else:
@@ -44,8 +45,8 @@ for team in teams:
 
 with open('../output/results.csv', mode='w') as results:
     results_writer = csv.writer(results, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-    results_writer.writerow(['Team Name', 'Technical Difficulty', 'Intuitiveness', 'Impact/Usefulness', 'Creativity', 'Wow Factor', 'Total Average', 'Total Score'])
+    results_writer.writerow(['Team Name', 'Technical Difficulty', 'Creativity', 'Impact', 'Polish', 'Wow Factor', 'Total Average', 'Total Score', 'In House'])
     for team in final:
-        results_writer.writerow([team.team_name, team.tech, team.pol, team.imp, team.cre, team.wow, team.average, team.sum])
+        results_writer.writerow([team.team_name, team.tech, team.pol, team.imp, team.cre, team.wow, team.average, team.sum, team.in_house])
 
 
