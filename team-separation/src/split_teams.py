@@ -9,7 +9,6 @@ def split_teams(teams, JUDGE_PAIRS):
 
     # first round of teams
     temp_teams = teams.copy()
-    print(teams)  # GET RID OF
     random.shuffle(temp_teams)
     pair_num=1
     for team in temp_teams:
