@@ -12,7 +12,7 @@ JUDGE_PAIRS = int(JUDGES_COUNT/2)
 # holds teams, and by challenge and room
 teams = []
 challenges = { c.AEP : [], c.HONDA : [], c.INNOVATION : []}
-rooms = { r.JURY : [], r.CENTER : [], r.ROOM175 : [], r.ROOM190 : [], r.ROOM195 : [], r.BANVARD : []}
+rooms = { r.MAKER1 : [], r.MAKER2 : [], r.MAKER3 : [], r.MAKER4 : [], r.MAKER5 : []}
 
 # get file from team-registration directory
 filename = os.listdir('../data')[0]
