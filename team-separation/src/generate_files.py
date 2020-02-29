@@ -18,13 +18,13 @@ rooms = { r.JURY : [], r.CENTER : [], r.ROOM175 : [], r.ROOM190 : [], r.ROOM195 
 filename = os.listdir('../data')[0]
 
 # open file and read through all teams
-with open('../data/'+filename) as data:
+with open('../data/'+filename, errors = 'ignore') as data:
     reader = csv.reader(data)
     for row in reader:
         # row 6 True means complete survey
         if row[6] == 'True':
             # create a team object
-            team = Team(row[17:27])
+            team = Team(row[17:32])
             teams.append(team)
 
             # add to room list
