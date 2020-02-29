@@ -24,7 +24,7 @@ with open('../data/'+filename, errors = 'ignore') as data:
         # row 6 True means complete survey
         if row[6] == 'True':
             # create a team object
-            team = Team(row[17:32])
+            team = Team(row[17:33])
             teams.append(team)
 
             # add to room list
