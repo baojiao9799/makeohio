@@ -3,12 +3,12 @@ class Team:
         self.team_name = data[0]
         self.member_names = []
         j = 2
-        for i in range(int(data[1]):
+        for i in range(int(data[1])):
             self.member_names.append(data[j])
             j += 2
         self.member_emails = []
         j = 3
-        for i in range(int(data[1]):
+        for i in range(int(data[1])):
             self.member_emails.append(data[j])
             j += 2
         self.project_name = data[10]
