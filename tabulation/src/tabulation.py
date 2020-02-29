@@ -47,6 +47,6 @@ with open('../output/results.csv', mode='w') as results:
     results_writer = csv.writer(results, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
     results_writer.writerow(['Team Name', 'Technical Difficulty', 'Creativity', 'Impact', 'Polish', 'Wow Factor', 'Total Average', 'Total Score', 'In House'])
     for team in final:
-        results_writer.writerow([team.team_name, team.tech, team.pol, team.imp, team.cre, team.wow, team.average, team.sum, team.in_house])
+        results_writer.writerow([team.team_name, team.tech, team.cre, team.imp, team.pol, team.wow, team.average, team.sum, team.in_house])
 
 
